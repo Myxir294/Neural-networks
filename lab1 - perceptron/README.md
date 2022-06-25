@@ -1,5 +1,5 @@
 # Klasyfikacja perceptron/adaline
-Folder zawiera przykłady wykorzystania pojedycznego neuronu do zadania klasyfikacji
+Folder zawiera przykłady wykorzystania neuronu do prostego zadania klasyfikacji
 
 W zadaniu wykorzystano klasy modelujące neuron zaczerpnięte ze strony https://github.com/rasbt/pattern_classification/blob/master/machine_learning/singlelayer_neural_networks/singlelayer_neural_networks.ipynb
 
