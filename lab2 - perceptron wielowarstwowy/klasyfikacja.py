@@ -2,7 +2,6 @@
 #Wynikiem działania jest zwizualizowanie poprawności klasyfikacji poprzez macierze pomyłek
 #Najlepsze parametry algorytmu dobierane są automatycznie z wykorzystaniem narzędzia GridSearchCV
 
-import numpy as np
 import pandas as pd
 from sklearn.neural_network import MLPClassifier
 from sklearn import datasets
@@ -27,7 +26,7 @@ from sklearn.metrics import confusion_matrix
 # test_X = d3_test_X.reshape((nsamples,nx*ny))
 # test_X = test_X.astype('float32') / 255
 
-# print("Dla obrazków ze zbioru MNIST" )
+# print("For MNIST images" )
 
 # Ważne - ustawić liczbę iteracji "max_iter" na niewielką, np. 5 - w innym przypadku niepotrzebnie długo liczy
 ########################################
@@ -36,7 +35,7 @@ iris = datasets.load_iris()
 
 train_X, test_X, train_y, test_y = train_test_split(iris.data, iris.target, stratify=iris.target, random_state=5)
 
-print("Dla danych Iris")
+print("For Iris data")
 #######################################
 
 
@@ -47,7 +46,7 @@ print("Dla danych Iris")
 
 # train_X, test_X, train_y, test_y = train_test_split(X, y, random_state=5)
 
-# print("Dla danych dotyczących przedziału ceny telefonu")
+# print("For smartphone price tags data (Kaggle.com)")
 # ######################################
 
 #Wektor przyjętych parametrów
@@ -62,7 +61,7 @@ clf.fit(train_X, train_y)
 
 #Wyświetlenie wyników i dobranych parametrów
 print(clf.best_params_)
-print("Dokladnosc to " + str(clf.score(test_X, test_y)*100) + " %")
+print("Score is " + str(clf.score(test_X, test_y)*100) + " %")
 
 matrix = confusion_matrix(test_y, clf.predict(test_X))
 print(matrix)
