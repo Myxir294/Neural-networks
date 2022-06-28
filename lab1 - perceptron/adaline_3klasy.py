@@ -97,19 +97,19 @@ ada3.train(X_std, y4_train)
 #Wypisanie wynikow dla kazdego z neuronów
 
 
-print('Liczba blednych klasyfikacji w zbiorze testujacym dla adaline 1: %d' % ((y2_test != ada1.predict(X_std2)).sum()))
+print('Incorrect test data classifications for Adaline 1: %d' % ((y2_test != ada1.predict(X_std2)).sum()))
 
 #Zapisanie tabeli okresjalacej prawdopodobienstwo nalezenia obiektu dla danej klasy
 propability = ada1.net_input(X_std2)
 
 #print(propability)
 
-print('Liczba blednych klasyfikacji w zbiorze testujacym dla adaline 2: %d' % ((y3_test != ada2.predict(X_std2)).sum()))
+print('Incorrect test data classifications for Adaline 2: %d' % ((y3_test != ada2.predict(X_std2)).sum()))
 
 propability2 = ada2.net_input(X_std2)
 #print(propability2)
 
-print('Liczba blednych klasyfikacji w zbiorze testujacym dla adaline 3: %d' % ((y4_test != ada3.predict(X_std2)).sum()))
+print('Incorrect test data classifications for Adaline 3: %d' % ((y4_test != ada3.predict(X_std2)).sum()))
 
 propability3 = ada3.net_input(X_std2)
 #print(propability3)
@@ -135,4 +135,4 @@ y_real_value = df.iloc[~x_train_id, 4]
 #print(y_real_value)
 
 #Zsumowanie ilosci blednych klasyfikacji
-print('Calkowita liczba blednych klasyfikacji uwzgledniajac prawdopodobienstwa: %d na %d' % ((y_real_value != results).sum(), len(results)))
+print('Total number of incorrect classifications (by probability) : %d of %d' % ((y_real_value != results).sum(), len(results)))

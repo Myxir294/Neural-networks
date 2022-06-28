@@ -89,19 +89,19 @@ ppn4.train(X2_train, y4_train)
 # plt.ylabel('petal length [cm]')
 # plt.show()
 
-print('Liczba blednych klasyfikacji w zbiorze testujacym dla perceptronu 1: %d' % ((y2_test != ppn2.predict(X2_test)).sum()))
+print('Incorrect test data classifications for perceptron 1: %d' % ((y2_test != ppn2.predict(X2_test)).sum()))
 
 #Zapisanie tabeli okresjalacej prawdopodobienstwo nalezenia obiektu dla danej klasy
 propability = ppn2.net_input(X2_test)
 
 #print(propability)
 
-print('Liczba blednych klasyfikacji w zbiorze testujacym dla perceptronu 2: %d' % ((y3_test != ppn3.predict(X2_test)).sum()))
+print('Incorrect test data classifications for perceptron 2: %d' % ((y3_test != ppn3.predict(X2_test)).sum()))
 
 propability2 = ppn3.net_input(X2_test)
 #print(propability2)
 
-print('Liczba blednych klasyfikacji w zbiorze testujacym dla perceptronu 3: %d' % ((y4_test != ppn4.predict(X2_test)).sum()))
+print('Incorrect test data classifications for perceptron 3: %d' % ((y4_test != ppn4.predict(X2_test)).sum()))
 
 propability3 = ppn4.net_input(X2_test)
 #print(propability3)
@@ -127,4 +127,4 @@ y_real_value = df.iloc[~x_train_id, 4]
 #print(y_real_value)
 
 #Zsumowanie ilosci blednych klasyfikacji
-print('Calkowita liczba blednych klasyfikacji uwzgledniajac prawdopodobienstwa: %d na %d' % ((y_real_value != results).sum(), len(results)))
+print('Total number of misclassifications (by probability) : %d na %d' % ((y_real_value != results).sum(), len(results)))

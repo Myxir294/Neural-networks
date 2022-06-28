@@ -66,5 +66,5 @@ ada = AdalineGD(epochs=100, eta=0.01)
 
 ada.train(X_std, y_train)
 
-print('Liczba blednych klasyfikacji w zbiorze testujacym dla Adaline 2: %d na %d' % ((y_test != ada.predict(X_std2)).sum(), len(y_test)))
+print('Incorrect classifications for Adaline 2: %d of %d' % ((y_test != ada.predict(X_std2)).sum(), len(y_test)))
 
