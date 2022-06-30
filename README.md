@@ -4,4 +4,4 @@ Zrealizowane zadania wykonano w ramach kursu Programowanie Sieciowe na 6 semestr
 
 A collection of basic programs showing the usage and posibilites of machine learning.  
 The exercises have been made as part of 'Neural Networks Programming' course in 6th semester of technical Bachelor studies.  
-Further english descriptions will be added in the future.  
+Further English descriptions will be added in the future.  
