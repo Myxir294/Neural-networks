@@ -1,5 +1,5 @@
 # Zadanie klasteryzacji
-Folder zawiera program wykorzystujący wlasnoręcznie zrealizowany algorytm Kohonena do klasteryzacji danych ze zbioru Iris    
+Folder zawiera program wykorzystujący wlasnoręcznie zrealizowany (na podstawie zaleceń prowadzącego zajęcia) algorytm Kohonena do klasteryzacji danych ze zbioru Iris    
 
 Celem algorytmu jest grupowanie danych w celu ułatwienia znalezienia zależności między wartościami.    
 
