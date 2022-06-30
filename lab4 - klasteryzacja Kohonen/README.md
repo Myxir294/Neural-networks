@@ -7,7 +7,7 @@ Wynikiem działania jest podanie jakosci klasteryzacji (poprzez wynik Daviesa-Bo
 zwizualizowanej poprzez macierz pomyłek  
 
 UWAGA - domyślna liczba klastrów (2) powoduje otrzymanie dobrego wyniku Daviesa-Bouldina, ale wynosi mniej niż liczba klas
-zbioru Iris (3) co przekłada się na brak możliwości poprawnego grupowania kwiatów Iris versicolor.
+zbioru Iris (3), co przekłada się na brak możliwości poprawnego grupowania kwiatów Iris versicolor.
 
 
   
