@@ -1,4 +1,4 @@
-# Zadanie regresji z wykorzystaniem klasteryzacji
+# Kohonen-regression
 Folder zawiera program realizujący alternatywne podejście do zadania 3., dotyczącego regresji dla danych wybranej spółki giełdowej, dostępnych pod adresem https://www.kaggle.com/datasets/camnugent/sandp500
 
 Regresja odbywa się z wykorzystaniem napisanego w poprzednim zadaniu algorytmu Kohonena oraz typu sieci Radial Basis Function  
