@@ -5,8 +5,8 @@ Regresja odbywa się z wykorzystaniem napisanego w poprzednim zadaniu algorytmu 
 
 W zadaniu zrealizowano dwa warianty - wykorzystujący ręcznie napisany algorytm algebraiczny na podstawie materiałów pomocniczych do kursu oraz program oparty na algorytmie iteracyjnym ze strony https://pythonmachinelearning.pro/using-neural-networks-for-regression-radial-basis-function-networks/  
 
-Wynikiem działania jest podanie jakosci klasteryzacji (poprzez wynik Daviesa-Bouldina) oraz wizualizacja na wykresach jego
-przełożenia na jakość regresji.   
+Wynikiem działania jest podanie jakości klasteryzacji (poprzez wynik Daviesa-Bouldina) oraz wizualizacja na wykresach jego
+przełożenia na jakość regresji...   
 
 UWAGA - z powodu trudności związanych z przerobieniem wskazanego kodu tak, aby mógł obsługiwać dane wielowymiarowe, realizacja algorytmu iteracyjnego działa dla ustalonej liczby klastrów wynoszącej 20. Zbieżność wyjść skonstruowanej sieci do wartości rzeczywistych zależy od wylosowanych wag, liczby epoch oraz współczynnika uczenia.    
 
