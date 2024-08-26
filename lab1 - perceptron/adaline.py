@@ -1,10 +1,10 @@
-#Program wykorzystuje model neuronu AdalineGD do klasyfikacji danych ze zbioru iris
-#Wynikiem działania jest wypisanie ilości niepoprawnych klasyfikacji danych ze zbioru testujacego
+#Program uses Adaline model to classify data from Iris dataset, dividing it to 2 classes.
+#In the result, the program provides its accuracy as the output
 
 import numpy as np
 import pandas as pd
 
-#Klasa modelujaca Adaline - wykorzystano propozycje klasy z repozytorium wskazanego przez prowadzącego zajęcia
+#Class providing Adaline model - suggested by academic supervisor
 class AdalineGD(object):
     
     def __init__(self, eta=0.01, epochs=50): 
@@ -36,23 +36,23 @@ class AdalineGD(object):
 
 df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data', header=None)
 
-#Zapisanie wyjsc odpowiadajacych wykorzystywanej klasie
-#Ponizsza tablica 150 elementow zawiera 1 w polach odpowiadajacych podanej nazwie i -1 w pozostalych
+#Saving outputs corresponding to each class
+#Each table of 150 elements contains 1 if class name is matching, -1 otherwise
 y = df.iloc[0:150, 4].values
 y = np.where(y == 'Iris-virginica', 1, -1)
 
-#Losowy wybor zestawow danych trenujacych stanowiacych okolo 80% calego zbioru danych
+#Random choosing of training data - about 80% of all the data, due to standard distribution of [0,1]
 x_train_id = np.random.rand(len(df)) < 0.8
 
-#Wyselekcjonowanie pozadanych wartosci dla wybranych danych trenujacych i testujacych
-y_train = y[x_train_id] #dlugosc ok 120
-y_test = y[~x_train_id] #dlugosc ok 30
+#Providing values for training and testing data
+y_train = y[x_train_id] # ~ 120 values - training
+y_test = y[~x_train_id] # ~ 30 values - testing
 
-#Wybor zestawu parametrow decydujacych o klasyfikacji obiektu do jednej z klas
-X_train = df.iloc[x_train_id, [0,1,2,3]].values #Dla danych trenujacych 
-X_test = df.iloc[~x_train_id, [0,1,2,3]].values #Dla danych testujacych
+#Chossing parameters deciding the classification result
+X_train = df.iloc[x_train_id, [0,1,2,3]].values #For training data
+X_test = df.iloc[~x_train_id, [0,1,2,3]].values #For testing data
 
-#Standaryzacja danych
+#Standarization to (0,1)
 X_std = np.copy(X_train)
 X_std[:,0] = (X_train[:,0] - X_train[:,0].mean()) / X_train[:,0].std()
 X_std[:,1] = (X_train[:,1] - X_train[:,1].mean()) / X_train[:,1].std()
@@ -61,10 +61,13 @@ X_std2 = np.copy(X_test)
 X_std2[:,0] = (X_test[:,0] - X_test[:,0].mean()) / X_test[:,0].std()
 X_std2[:,1] = (X_test[:,1] - X_test[:,1].mean()) / X_test[:,1].std()
 
-#Zdefiniowanie modelu Adeline - edycja wartosci epochs i eta bezsposrednio przeklada sie na jakosc nauki 
+#Defining neuron - tweaking epochs and eta values changes learning results
 ada = AdalineGD(epochs=100, eta=0.01)
 
+#Training
 ada.train(X_std, y_train)
 
-print('Incorrect classifications for Adaline 2: %d of %d' % ((y_test != ada.predict(X_std2)).sum(), len(y_test)))
+print('Incorrect classifications for Adaline Model: %d of %d' % ((y_test != ada.predict(X_std2)).sum(), len(y_test)))
 
+#The results will be different each time, so to test parameters you need to run the code multiple times and
+#make some statistics - this process can be of course automated by modifying the script
