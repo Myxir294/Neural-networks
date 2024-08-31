@@ -1,8 +1,7 @@
-# Złożone zadanie klasyfikacji
-Folder zawiera przykłady wykorzystania wielowarstwowego perceptronu do bardziej złożonego zadania klasyfikacji.     
+# Complex classification task
 
-W zadaniu wykorzystano wybrane gotowe klasy i narzędzia z biblioteki sklearn.  
+The folder contains examples of using multi-layer perceptrons for more complex classification task, made using sklearn library.
 
-Celem zadania było wykonanie klasyfikacji gatunków kwiatów ze zbioru iris, cyfr ze zbioru MNIST oraz przedziałów cenowych telefonów (wybrany zbiór danych z serwisu Kaggle.com https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification).   
+The goal of the task was to classify data from Iris dataset, numbers from MNIST dataset and mobile phones prices range (examplar dataset from Kaggle.com page https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification)
 
-Otrzymane wyniki wizualizowane są poprzez macierz pomyłek.   
+The results are presented using error matrix.
