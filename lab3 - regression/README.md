@@ -1,10 +1,12 @@
 # Zadanie regresji
-Folder zawiera przykład wykorzystania wielowarstwowego perceptronu do zadania regresji na zbiorze danych giełdowych https://www.kaggle.com/datasets/camnugent/sandp500     
 
-W zadaniu wykorzystano wybrane gotowe klasy i narzędzia z biblioteki sklearn.  
+# Regression task
 
-Celem algorytmu jest umozliwienie przewidywanie jednej z cen akcji wybranej firmy w danym dniu na podstawie znajomosci danych z 5 poprzednich dni
+The folder contains an example of using multilayer perceptron to make a regression operation on stock database
+https://www.kaggle.com/datasets/camnugent/sandp500.
 
-Otrzymany wynik podawany jest jako średnia procentowa dokładność przewidywania.  
+I have used classes and tools from sklearn library.
 
-Przewiduje sie możliwość rozszerzenia programu o ponowne przeskalowanie danych, tak aby uzyskane wyniki można było łatwiej odnieść do rzeczywistości.
+The goal of the algorithrm is to predict share price of a chosen company on given day by analyzing trends from 5 days before. 
+
+The result is provided as mean accuracy of prediction, in percents.
