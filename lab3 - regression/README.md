@@ -1,5 +1,3 @@
-# Zadanie regresji
-
 # Regression task
 
 The folder contains an example of using multilayer perceptron to make a regression operation on stock database
