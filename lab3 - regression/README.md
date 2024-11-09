@@ -11,4 +11,4 @@ Optimization of learning parameters is made using GridSearchCV tool.
 
 The result is provided as mean accuracy of prediction, in percents.
 
-To do - improve results presentation, data shuffling
+To do - improve results presentation

@@ -43,7 +43,7 @@ print("Then resizing into 2D of shape " + str(numpy_x3.shape))
 # k% of all data is testing data
 k = 36
 
-#Division into testing and training data (no shuffling - this should probably be improved)
+#Division into testing and training data (no shuffling)
 train_X, test_X, train_y, test_y = train_test_split(numpy_x3, numpy_y, shuffle=False, test_size=(k/100))
 print("Test data is " + str(len(test_y)*100/len(numpy_y)) + " % of the last data in sheet")
 print("Test data length is " + str(len(test_y)) + " days")
@@ -73,4 +73,4 @@ print(test_y[:5])
 
 print("Average regression precision is " + str(regr.score(test_X, test_y) * 100) + " %")
 
-#To do - improve results presentation, data shuffling
+#To do - improve results presentation
